@@ -1,1 +1,10 @@
 @import "bootstrap";
+
+body {
+  font-family: "Hanken Grotesk", serif !important;
+}
+
+/* CUSTOM CSS */
+.text-1 {
+  color: #cec0ff;
+}

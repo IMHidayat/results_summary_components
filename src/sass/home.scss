@@ -1,14 +1,44 @@
 // * HEADER==================================================
 
 // * MAIN====================================================
-main div {
-  h1 {
-    color: red;
-  }
-}
+main {
+  height: 100vh;
 
-main .test {
-  color: blue;
+  div.row {
+    section:first-child {
+      height: 27rem;
+      background-image: linear-gradient(to top, #312cea, #6743ff);
+
+      div.rounded-circle {
+        display: grid;
+        place-content: center;
+        width: 175px;
+        height: 175px;
+        margin: 2.25rem auto;
+        background-image: linear-gradient(#4a25d7, transparent);
+
+        h1 {
+          font-size: 4rem;
+        }
+      }
+
+      p {
+        width: 19rem;
+        font-size: 1.15rem;
+      }
+    }
+    section:last-child {
+      padding: 2rem;
+      div {
+        color: #ff7d7d;
+        background-color: #fff6f5;
+      }
+    }
+  }
+
+  .test {
+    color: blue;
+  }
 }
 
 // * FOOTER==================================================
