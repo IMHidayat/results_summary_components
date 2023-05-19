@@ -3,7 +3,6 @@
 // * MAIN====================================================
 main {
   height: 100vh;
-
   div.row {
     section:first-child {
       height: 27rem;
@@ -21,9 +20,6 @@ main {
         width: 19rem;
       }
     }
-    section:last-child {
-      padding: 2rem;
-    }
   }
 
   .test {
@@ -37,6 +33,26 @@ main {
 @media (min-width: 768px) {
   //*HEADER
   //*MAIN
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div.row {
+      width: 45rem;
+      section:first-child {
+        height: auto;
+
+        div.rounded-circle {
+          width: 200px;
+          height: 200px;
+        }
+
+        p {
+          width: 15rem;
+        }
+      }
+    }
+  }
   //*FOOTER
 }
 

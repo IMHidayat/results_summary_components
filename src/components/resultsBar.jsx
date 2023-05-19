@@ -1,6 +1,6 @@
 export default function ResultBar(p) {
   return (
-    <div className={"d-flex p-3 mb-4 font-bold align-content-center rounded " + p.bgColor}>
+    <div className={"d-flex p-3 mb-4 md:mb-[20rem] font-bold align-content-center rounded " + p.bgColor}>
       <img className="me-3" src={p.img} alt="Icon" />
       <span className={p.color}>{p.name}</span>
       <p className="ms-auto">
