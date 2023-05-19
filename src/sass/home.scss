@@ -12,27 +12,17 @@ main {
       div.rounded-circle {
         display: grid;
         place-content: center;
-        width: 175px;
-        height: 175px;
-        margin: 2.25rem auto;
-        background-image: linear-gradient(#4a25d7, transparent);
-
-        h1 {
-          font-size: 4rem;
-        }
+        width: 165px;
+        height: 165px;
+        background-image: linear-gradient(#4a25d7 50%, transparent);
       }
 
       p {
         width: 19rem;
-        font-size: 1.15rem;
       }
     }
     section:last-child {
       padding: 2rem;
-      div {
-        color: #ff7d7d;
-        background-color: #fff6f5;
-      }
     }
   }
 

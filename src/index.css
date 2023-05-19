@@ -1,10 +1,17 @@
 @import "bootstrap";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: "Hanken Grotesk", serif !important;
+  letter-spacing: 0.75px;
 }
 
 /* CUSTOM CSS */
-.text-1 {
-  color: #cec0ff;
+@layer base {
+  .text-1 {
+    color: #cec0ff;
+  }
 }
