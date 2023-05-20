@@ -10,11 +10,17 @@ body {
 
 @layer base {
   .result-bar {
+    @apply flex-wrap;
     @apply items-center;
     @apply rounded-lg;
+
     @apply font-semibold;
+    @apply justify-between;
     img {
-      @apply w-[25px] md:w-[17px];
+      @apply md:w-[17px];
+    }
+    span {
+      @apply text-base;
     }
   }
 
@@ -22,7 +28,7 @@ body {
     @apply rounded-full;
     @apply font-semibold;
     @apply text-white;
-    @apply bg-[#303b59] hover:bg-gradient-to-b from-[#6945ff] to-[#322eed];
+    @apply bg-[#303b59] hover:opacity-90 active:bg-gradient-to-b from-[#6945ff] to-[#322eed];
     @apply text-[1.3rem] md:text-base;
   }
 }
