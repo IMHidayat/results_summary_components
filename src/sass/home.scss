@@ -1,63 +1,56 @@
 main {
-  min-height: 100vh;
-  > div {
-    grid-template-rows: auto 1fr;
+  @apply min-h-screen;
+  @apply md:place-items-center;
+  > article {
+    @apply grid-rows-[auto_1fr];
+    @apply md:grid-cols-2;
+    @apply md:w-[41rem];
+    @apply md:rounded-3xl md:shadow-2xl md:shadow-indigo-200;
     section:first-child {
-      @apply rounded-b-[2.5rem]  md:rounded-3xl;
       @apply text-center;
-      @apply h-[26.5rem];
-      background-image: linear-gradient(to top, #312cea, #6743ff);
-      h1 {
+      @apply bg-gradient-to-t from-[#312cea] to-[#6743ff];
+      @apply h-[26.5rem] md:h-auto;
+      @apply rounded-b-[2.5rem]  md:rounded-3xl;
+      > h1 {
+        @apply text-[1.3rem];
+        @apply text-color1;
         @apply font-bold;
       }
       > div {
-        display: grid;
-        place-content: center;
-        width: 165px;
-        height: 165px;
-        background-image: linear-gradient(#4a23cc, #442de0 50%, transparent);
+        @apply w-[165px] md:w-[175px];
+        @apply h-[165px] md:h-[175px];
+        @apply place-content-center;
+        @apply rounded-full;
+        @apply bg-gradient-to-b from-[#4a23cc] via-[#442ddf] to-[transparent];
+        > h1 {
+          @apply font-bold;
+          @apply text-[4rem];
+          @apply text-white;
+        }
+        > span {
+          @apply text-lg md:text-base;
+          @apply font-bold;
+          @apply text-[#7d71f1];
+        }
+      }
+      h2 {
+        @apply font-semibold;
+        @apply text-white;
+        @apply text-3xl md:text-[1.8rem];
       }
       p {
-        width: 22rem;
+        @apply text-color1;
+        @apply max-w-[22rem] md:w-[13rem];
+        @apply text-xl md:text-base;
+        @apply md:leading-5;
+        @apply md:tracking-tight;
+      }
+    }
+    section:last-child {
+      > h5 {
+        @apply text-fontsize1;
+        @apply font-bold;
       }
     }
   }
-
-  .test {
-    color: blue;
-  }
-}
-
-//?========================================================== MD
-@media (min-width: 768px) {
-  main {
-    display: grid;
-    place-items: center;
-
-    > div {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 41rem;
-      section:first-child {
-        height: auto;
-        div.rounded-full {
-          width: 175px;
-          height: 175px;
-        }
-
-        p {
-          width: 13rem;
-        }
-      }
-    }
-  }
-}
-
-//?========================================================== LG
-@media (min-width: 1024px) {
-}
-
-//?========================================================== XL
-
-@media (min-width: 1280px) {
 }

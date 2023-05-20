@@ -6,29 +6,30 @@ import iconVisual from "../assets/icon-visual.svg";
 
 // COMPONENTS
 import ResultBar from "../components/resultsBar";
+import Btn1 from "../components/btn1";
 
 export default function Home() {
   return (
     <main className="grid">
-      <div className="grid md:rounded-3xl md:shadow-2xl md:shadow-indigo-200 ">
+      <article className="grid">
         <section className="p-6 md:p-10 ">
-          <h1 className="mb-8 text-xl text-1">Your Result</h1>
-          <div className="mx-auto mb-8 md:mb-6 rounded-full ">
-            <h1 className="text-[4rem] text-white">76</h1>
-            <span className="text-lg font-bold text-gray-400">of 100</span>
+          <h1 className="mb-8 md:mt-[-10px]">Your Result</h1>
+          <div className="grid mx-auto mb-8 md:mb-6 ">
+            <h1 className="mb-[-.5rem] md:mb-[-1rem]">76</h1>
+            <span>of 100</span>
           </div>
-          <h2 className="mb-2 text-3xl md:text-[1.8rem] font-semibold text-white">Great</h2>
-          <p className="mx-auto text-xl md:text-base md:leading-5 md:tracking-tight text-1">You scored higher than 65% of the people who have taken these tests.</p>
+          <h2 className="mb-2">Great</h2>
+          <p className="mx-auto">You scored higher than 65% of the people who have taken these tests.</p>
         </section>
         <section className="grid py-7 px-9 md:p-9 ">
-          <h5 className="mb-1 md:mb-5 text-xl font-bold">Summary</h5>
-          <ResultBar name={"Reaction"} img={iconReaction} bgColor={"bg-[#fff6f5]"} color={"text-[#e97e86]"} val={80} />
-          <ResultBar name={"Memory"} img={iconMemory} bgColor={"bg-[#fffbf2]"} color={"text-[#f2be58]"} val={92} />
-          <ResultBar name={"Verbal"} img={iconVerbal} bgColor={"bg-[#f2fbfa]"} color={"text-[#4fb29b]"} val={61} />
-          <ResultBar name={"Visual"} img={iconVisual} bgColor={"bg-[#f3f3fd]"} color={"text-[#4b51b0]"} val={72} />
-          <button className="p-2 md:p-2 mt-2 rounded-full text-[1.3rem] md:text-base font-semibold text-white bg-[#303b59]">Continue</button>
+          <h5 className="md:mb-5 ">Summary</h5>
+          <ResultBar val={80} name={"Reaction"} c={"bg-[#fff6f5]"} c2={"text-[#e97e86]"} img={iconReaction} />
+          <ResultBar val={92} name={"Memory"} c={"bg-[#fffbf2]"} c2={"text-[#f2be58]"} img={iconMemory} />
+          <ResultBar val={61} name={"Verbal"} c={"bg-[#f2fbfa]"} c2={"text-[#4fb29b]"} img={iconVerbal} />
+          <ResultBar val={72} name={"Visual"} c={"bg-[#f3f3fd] "} c2={"text-[#4b51b0]"} c3={"md:mb-8"} img={iconVisual} />
+          <Btn1 c={"p-2"} />
         </section>
-      </div>
+      </article>
     </main>
   );
 }

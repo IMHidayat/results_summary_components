@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        1: "#cec0ff",
+        color1: "#cec0ff",
+      },
+      fontSize: {
+        fontsize1: "1.3rem",
       },
     },
     screens: {
