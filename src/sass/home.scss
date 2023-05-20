@@ -3,9 +3,14 @@ main {
   > div {
     grid-template-rows: auto 1fr;
     section:first-child {
-      height: 27rem;
+      @apply rounded-b-[2.5rem]  md:rounded-3xl;
+      @apply text-center;
+      @apply h-[26.5rem];
       background-image: linear-gradient(to top, #312cea, #6743ff);
-      div.rounded-full {
+      h1 {
+        @apply font-bold;
+      }
+      > div {
         display: grid;
         place-content: center;
         width: 165px;
@@ -13,7 +18,7 @@ main {
         background-image: linear-gradient(#4a23cc, #442de0 50%, transparent);
       }
       p {
-        width: 19rem;
+        width: 22rem;
       }
     }
   }

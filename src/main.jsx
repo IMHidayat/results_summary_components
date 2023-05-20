@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
 
 //PAGES
 import Home from "./pages/home";
+
+import "./index.scss";
 
 const router = createBrowserRouter([
   {
