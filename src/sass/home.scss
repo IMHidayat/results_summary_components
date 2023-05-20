@@ -1,21 +1,17 @@
-// * HEADER==================================================
-
-// * MAIN====================================================
 main {
-  height: 100vh;
-  div.row {
+  min-height: 100vh;
+  > div {
+    grid-template-rows: auto 1fr;
     section:first-child {
       height: 27rem;
       background-image: linear-gradient(to top, #312cea, #6743ff);
-
-      div.rounded-circle {
+      div.rounded-full {
         display: grid;
         place-content: center;
         width: 165px;
         height: 165px;
-        background-image: linear-gradient(#4a25d7 50%, transparent);
+        background-image: linear-gradient(#4a23cc, #442de0 50%, transparent);
       }
-
       p {
         width: 19rem;
       }
@@ -27,46 +23,36 @@ main {
   }
 }
 
-// * FOOTER==================================================
-
 //?========================================================== MD
 @media (min-width: 768px) {
-  //*HEADER
-  //*MAIN
   main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    div.row {
-      width: 45rem;
+    display: grid;
+    place-items: center;
+
+    > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 41rem;
       section:first-child {
         height: auto;
-
-        div.rounded-circle {
-          width: 200px;
-          height: 200px;
+        div.rounded-full {
+          width: 175px;
+          height: 175px;
         }
 
         p {
-          width: 15rem;
+          width: 13rem;
         }
       }
     }
   }
-  //*FOOTER
 }
 
 //?========================================================== LG
-@media (min-width: 992px) {
-  //*HEADER
-  //*MAIN
-  //*FOOTER
+@media (min-width: 1024px) {
 }
 
 //?========================================================== XL
 
-@media (min-width: 1200px) {
-  //*HEADER
-  //*MAIN
-  //*FOOTER
+@media (min-width: 1280px) {
 }

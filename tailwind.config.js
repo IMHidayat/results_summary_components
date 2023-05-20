@@ -5,10 +5,10 @@ export default {
     important: true,
     extend: {},
     screens: {
-      sm: "576px",
+      sm: "640px",
       md: "768px",
-      lg: "992px",
-      xl: "1200px",
+      lg: "1024px",
+      xl: "1280px",
     },
   },
   plugins: [],
