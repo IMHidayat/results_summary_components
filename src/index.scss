@@ -8,92 +8,51 @@ body {
   letter-spacing: 0px;
 }
 
+@mixin border-corner($border-1, $border-2, $pos-1, $pos-2) {
+  @apply content-[""];
+  @apply w-[10px];
+  @apply h-[10px];
+  @apply absolute;
+  @apply z-10;
+  #{$border-1}: 2px solid rgba(0, 0, 0, 0.05);
+  #{$border-2}: 2px solid rgba(0, 0, 0, 0.05);
+  #{$pos-1}: 0;
+  #{$pos-2}: 0;
+}
+
 @layer base {
-  .result-bar {
+  .result-bar-wrapper {
     @apply relative;
-    @apply flex-wrap;
-    @apply items-center;
     @apply rounded-lg;
-    @apply font-semibold;
-    @apply justify-between;
-    // todo TRY TO MAKE THIS WORK
-    // span.borderz {
-    //   @apply absolute;
-    //   @apply w-full;
-    //   @apply h-full;
-    //   @apply left-0;
-    //   .se {
-    //     position: absolute;
-    //     content: "asdfasd";
-    //     width: 1rem;
-    //     height: 1rem;
-    //     background-color: red;
-    //   }
-    // }
-    //todo this works
-    span.border-top {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
-      &:before {
-        content: "";
-        left: 0;
-        top: 0;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        border-top: 1.5px solid rgba($color: #000000, $alpha: 0.05);
-        border-left: 1.5px solid rgba($color: #000000, $alpha: 0.05);
-        @apply rounded-ss-lg;
-      }
-      &:after {
-        content: "";
-        right: 0;
-        top: 0;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        border-top: 1.5px solid rgba($color: #000000, $alpha: 0.05);
-        border-right: 1.5px solid rgba($color: #000000, $alpha: 0.05);
-        @apply rounded-se-lg;
-      }
+    &:before {
+      @include border-corner(border-left, border-top, left, top);
+      @apply rounded-ss-lg;
     }
-    span.border-bottom {
-      position: absolute;
-      width: 100%;
-      @apply h-full;
-      bottom: 0;
-      left: 0;
+    &:after {
+      @include border-corner(border-top, border-right, top, right);
+      @apply rounded-se-lg;
+    }
+    .result-bar {
+      @apply relative;
+      @apply flex-wrap;
+      @apply items-center;
+      @apply rounded-lg;
+      @apply font-semibold;
+      @apply justify-between;
       &:before {
-        @apply content-[""];
-        @apply left-0;
-        @apply bottom-0;
-        @apply w-[10px];
-        @apply h-[10px];
-        @apply absolute;
-        border-bottom: 1.5px solid rgba($color: #000000, $alpha: 0.05);
-        border-left: 1.5px solid rgba($color: #000000, $alpha: 0.05);
+        @include border-corner(border-left, border-bottom, left, bottom);
         @apply rounded-es-lg;
       }
       &:after {
-        content: "";
-        right: 0;
-        bottom: 0;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        border-bottom: 1.5px solid rgba($color: #000000, $alpha: 0.05);
-        border-right: 1.5px solid rgba($color: #000000, $alpha: 0.05);
+        @include border-corner(border-bottom, border-right, bottom, right);
         @apply rounded-ee-lg;
       }
-    }
-
-    img {
-      @apply md:w-[17px];
-    }
-    span {
-      @apply text-base;
+      img {
+        @apply md:w-[17px];
+      }
+      span {
+        @apply text-base;
+      }
     }
   }
 
