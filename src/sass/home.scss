@@ -2,7 +2,7 @@ main {
   @apply min-h-screen;
   @apply md:place-items-center;
   > article {
-    @apply md:w-[41rem];
+    @apply md:w-[650px];
     @apply md:grid-cols-2;
     @apply md:rounded-3xl md:shadow-2xl md:shadow-indigo-200;
     section:first-child {
